@@ -6,7 +6,6 @@
 #include <stdio.h>
 
 int main() {
-int controle731 = 14;
 
 int quantidadeEquipes;
 int jogosPorEquipe;
