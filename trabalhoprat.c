@@ -7,8 +7,8 @@ int main(){
 	system("chcp 65001 > nul");
 	setlocale(LC_ALL, "Portuguese");
 	
-	int qtdEquipes= 3;
-	int qtdjogos = 10;
+	int quantidadeEquipes= 3;
+	int jogosPorEquipe = 10;
 	int i=1;
 	int totaldevitorias=0;
 	int totaldeDerrotas=0;
@@ -30,7 +30,7 @@ int main(){
 	int qtdmenor=0;
 	int registroCompleto=0;
 	
-	for(i=1; i <= qtdEquipes; i++){
+	for(i=1; i <= quantidadeEquipes; i++){
 		
 		printf("\nQuantas vitórias a Equipe %d teve?\n", i );
 		scanf("%d",&vitorias);
@@ -41,8 +41,7 @@ int main(){
 		
 		
 		
-		while(vitorias < 0 || Empates < 0 || Derrotas < 0 || vitorias + Empates + Derrotas != qtdjogos
-		) {
+		while(vitorias < 0 || Empates < 0 || Derrotas < 0 || vitorias + Empates + Derrotas != jogosPorEquipe) {
 			
 			printf("Resultados invalidos! Tente novamente\n");
 			
