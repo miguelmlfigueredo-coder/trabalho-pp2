@@ -17,4 +17,18 @@ int main(){
 	int vitorias=0;
 	int Derrotas=0;
 	int Empates=0;
-	int pontos=0;
+	int pontos=0; 
+	for(i=1; i <= qtdEquipes; i++){
+		
+		printf("\nQuantas vitórias a Equipe %d teve?\n", i );
+		scanf("%d",&vitorias);
+		
+		printf("\nQuantas empates a Equipe %d teve?\n", i );
+		scanf("%d",&Empates);
+		
+		printf("\nQuantas derrotas a Equipe %d teve?\n", i );
+		scanf("%d",&Derrotas);
+		
+		totaldevitorias+=vitorias;
+		totaldeDerrotas+=Derrotas;
+		totaldeEmpates+=Empates; } 
