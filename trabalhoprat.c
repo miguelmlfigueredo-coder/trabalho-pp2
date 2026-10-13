@@ -6,9 +6,19 @@
 int main(){
 	system("chcp 65001 > nul");
 	setlocale(LC_ALL, "Portuguese");
-	
-	int quantidadeEquipes= 3;
-	int jogosPorEquipe = 10;
+
+/*
+  Trabalho N1AT2 - Sistema de Controle de Campeonato
+  Integrantes: Miguel de Medeiros, Willian Ferreira, Thiago Neres.
+*/
+
+
+
+int quantidadeEquipes;
+int jogosPorEquipe;
+int opcaoMenu = 0;
+int registroCompleto = 0;
+
 	int i=1;
 	int totaldevitorias=0;
 	int totaldeDerrotas=0;
@@ -28,8 +38,38 @@ int main(){
 	int equipeMenor=0;
 	int qtdmaior=0;
 	int qtdmenor=0;
-	int registroCompleto=0;
 	
+	 
+
+
+printf("Qual a quantidade de equipes (3 a 10): ");
+scanf("%d", &quantidadeEquipes);
+while (quantidadeEquipes < 3 || quantidadeEquipes > 10) {
+    printf("Valor invalido, digite de novo (3 a 10): ");
+    scanf("%d", &quantidadeEquipes);
+}
+
+
+printf("Qual a quantidade de jogos por equipe (1 a 10): ");
+scanf("%d", &jogosPorEquipe);
+while (jogosPorEquipe < 1 || jogosPorEquipe > 10) {
+    printf("Valor invalido, digite de novo (1 a 10): ");
+    scanf("%d", &jogosPorEquipe);
+}
+
+
+while (opcaoMenu != 5) {
+    printf("\n1 - Registrar resultados do campeonato\n");
+    printf("2 - Mostrar resumo do campeonato\n");
+    printf("3 - Mostrar regulamento\n");
+    printf("4 - Simular campanha de uma equipe\n");
+    printf("5 - Encerrar sistema\n");
+    printf("Escolha uma opcao: ");
+    scanf("%d", &opcaoMenu);
+
+    switch (opcaoMenu) {
+        case 1:
+    
 	for(i=1; i <= quantidadeEquipes; i++){
 		
 		printf("\nQuantas vitórias a Equipe %d teve?\n", i );
@@ -119,16 +159,41 @@ int main(){
     printf("Maior pontuacao: %d (Equipe %d)\n", maiorPontuacao, equipeMaior);
     printf("Equipes empatadas na maior pontuacao: %d\n", qtdmaior);
     printf("Menor pontuacao: %d (Equipe %d)\n", menorPontuacao, equipeMenor);
-    printf("Equipes empatadas na menor pontuacao: %d\n", qtdmenor);	
-		
+    printf("Equipes empatadas na menor pontuacao: %d\n", qtdmenor);	 
+    
+            break;
+        case 2:
+            // parte do thiago
+            break;
+        case 3:
+            printf("\nREGULAMENTO\n");
+            printf("Vitoria = 3 pontos\n");
+            printf("Empate = 1 ponto\n");
+            printf("Derrota = 0 pontos\n");
+            printf("15 ou mais pontos: Excelente campanha\n");
+            printf("10 a 14 pontos: Boa campanha\n");
+            printf("5 a 9 pontos: Campanha regular\n");
+            printf("Menos de 5 pontos: Campanha ruim\n");
+            printf("Equipes: de 3 a 10\n");
+            printf("Jogos por equipe: de 1 a 10\n");
+            break;
+        case 4:
+            // parte do thiago
+            break;
+        case 5:
+            // parte do thiago
+            break;
+        default:
+            printf("Opcao invalida!\n");
+    }
+}
+return 0;
+}
+
+
+
+
+
+
 
 	
-	
-	
-	
-	
-	
-	
-	
-	return 0;
-} 
